@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- define a viewport-->
+        <title>CERES</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- adicionar CSS Bootstrap localmente -->
+        <link href="css/bootstrap.solar.min.css" rel="stylesheet" media="screen">
+         <!-- CSS personalizado -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"><!-- Pegar a fonte no googlefont-->
+		<script language="javascript" src="js/jquery.js"></script>
+
+		<script>
+			function exibirPanelInfo() {
+				$('#panelInfo').toggleClass('invisible');
+			}
+
+			function exibirAtualizado() {
+				$('#atualizado').toggleClass('invisible')
+						.fadeIn('3000')
+						.delay('3000')
+						.fadeOut('3000')
+						$('#obrigado').text('Obrigado!');
+			}
+
+			function exibirMenu() {
+				$('#navbarColor01').toggleClass('show');
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img alt="Brand" src="img/logo_icon.png">
+						</a>
+					</div>
+				</div>
+			</nav>
+			<a class="navbar-brand" href="#">CERES</a>
+
+			<button onclick="exibirMenu()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="info_aluno.html">Aluno</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		<br>
+
+		<div class="container">
+
+			<div class="alert alert-success invisible" role="alert" id="atualizado">
+				Dados atualizados com sucesso!
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 order-1">
+					<div class="jumbotron">
+						<h1 class="display-3" id="obrigado">Bem-vindo!</h1>
+						<hr class="my-4">
+						<p>Atualize os dados sempre que necessário.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col order-2">
+					<p><strong>Matrícula: </strong> MAT123456</p>
+					<p><strong>Aluno: </strong> José da Silva Campos</p>
+					<p><strong>Responsável: </strong> Maria da Silva Campos</p>
+					<p><strong>Escola: </strong> Escola Estadual Aprender é Viver</p>
+				</div>
+
+				<div class="col-md-12 order-3">
+						<button class="btn btn-primary btn-lg btn-block" href="#" role="button" onclick="exibirPanelInfo()">Atualizar Dados</button>
+				</div>
+			</div>
+
+			<br>
+
+
+			<div id="panelInfo" class="invisible">
+				<form>
+					<fieldset>
+						<legend>Atualização de Cadastro</legend>
+						<div class="form-group">
+							<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="cpfdoaluno">CPF do aluno</label>
+									<input type="cpfdoaluno" class="form-control" id="cpfdoaluno" aria-describedby="cpfdoaluno">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="cpfmae">CPF da mãe</label>
+									<input type="cpfmae" class="form-control" id="cpfmae" aria-describedby="cpfmae">
+								</div>
+							</div>
+						</div>
+						</div>
+
+						<legend>Endereço</legend>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="cep">CEP</label>
+										<input type="cep" class="form-control" id="cep" aria-describedby="cep">
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="rua">Rua</label>
+										<input type="rua" class="form-control" id="rua" aria-describedby="rua">
+									</div>
+								</div>
+
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="casa">Nº da Casa</label>
+										<input type="casa" class="form-control" id="casa" aria-describedby="casa">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="complemento">Complemento</label>
+										<input type="complemento" class="form-control" id="complemento" aria-describedby="complemento">
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="bairro">Bairro</label>
+										<input type="bairro" class="form-control" id="bairro" aria-describedby="bairro">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<legend>Contato</legend>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="cep">Telefone 1</label>
+										<input type="cep" class="form-control" id="cep" aria-describedby="cep">
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="rua">Telefone 2</label>
+										<input type="rua" class="form-control" id="rua" aria-describedby="rua">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<a class="btn btn-success btn-lg pull-right" href="#" role="button" onclick="exibirAtualizado()">Salvar</a>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+
+
+	</body>
+</html>

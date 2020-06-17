@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- define a viewport-->
+		<title>CERES</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<!-- adicionar CSS Bootstrap localmente -->
+		<link href="css/bootstrap.solar.min.css" rel="stylesheet" media="screen">
+		<!-- CSS personalizado -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"><!-- Pegar a fonte no googlefont-->
+		<script language="javascript" src="js/jquery.js"></script>
+
+		<script>
+			function exibirMenu() {
+				$('#navbarColor01').toggleClass('show');
+			}
+		</script>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img alt="Brand" src="img/logo_icon.png">
+						</a>
+					</div>
+				</div>
+			</nav>
+			<a class="navbar-brand" href="#">CERES</a>
+
+			<button onclick="exibirMenu()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="info_aluno.html">Aluno</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		<br>
+
+		<div class="container">
+			<div class="col-md-4 offset-md-4">
+				<form>
+					<fieldset>
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-header">
+								<legend class="text-center"><i class="fa fa-user"></i> Login Aluno</legend>
+							</div>
+
+							<div class="card-body bg-secondary">
+								<div class="form-group">
+									<label for="matricula" class="text-info">Matrícula</label>
+									<input type="email" class="form-control" id="matricula" aria-describedby="emailHelp" placeholder="Matrícula">
+								</div>
+								<div class="form-group">
+									<label for="nascimento" class="text-info">Data Nascimento</label>
+									<input type="date" class="form-control" id="nascimento" aria-describedby="emailHelp" placeholder="Data de Nascimento">
+								</div>
+
+								<div class="pull-right">
+									<button type="button" class="btn btn-info">Entrar</button>
+								</div>
+
+
+
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
